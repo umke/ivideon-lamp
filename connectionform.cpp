@@ -90,9 +90,7 @@ void ConnectionForm::slotReadyRead()
             in >> m_shpCommand->length;
             if (m_shpCommand->length == 0) {
                 m_shpLamp->setCommand(*m_shpCommand.data());
-                m_shpCommand->type = 0;
-                m_shpCommand->length = 0;
-                m_shpCommand->value.clear();
+                clearCommandData();
             }
         }
 
@@ -106,9 +104,7 @@ void ConnectionForm::slotReadyRead()
                 m_shpCommand->value << tmp;
             }
             m_shpLamp->setCommand(*m_shpCommand.data());
-            m_shpCommand->type = 0;
-            m_shpCommand->length = 0;
-            m_shpCommand->value.clear();
+            clearCommandData();
         }
     }
 }
@@ -146,4 +142,11 @@ void ConnectionForm::setControlsEnabled(bool sign)
 {
     ui->ServerNameLEdit->setEnabled(sign);
     ui->PortLEdit->setEnabled(sign);
+}
+
+void ConnectionForm::clearCommandData()
+{
+    m_shpCommand->type = 0;
+    m_shpCommand->length = 0;
+    m_shpCommand->value.clear();
 }

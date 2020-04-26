@@ -22,6 +22,7 @@ public:
     ~ConnectionForm();
 private:
     void setControlsEnabled(bool);
+    void clearCommandData();
 
 private:
     Ui::ConnectionForm *ui;

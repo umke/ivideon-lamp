@@ -158,6 +158,9 @@
           <height>25</height>
          </size>
         </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
         </property>
@@ -182,6 +185,12 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>ServerNameLEdit</tabstop>
+  <tabstop>PortLEdit</tabstop>
+  <tabstop>ConnectButton</tabstop>
+  <tabstop>DisconnectButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
