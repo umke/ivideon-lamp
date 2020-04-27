@@ -8,7 +8,7 @@ Lamp::Lamp(QWidget *parent) : QWidget(parent)
                             , m_pen(Qt::SolidLine)
                             , m_brash(Qt::HorPattern)
                             , m_state(LampOFF)
-                            , m_commandType(READY)
+                            , m_commandType(OFF)
                             ,m_lableStatus("OFF", this)
 {
     setMinimumSize(400, 400);

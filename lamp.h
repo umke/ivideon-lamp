@@ -5,7 +5,7 @@
 #include <QPainter>
 #include <QLabel>
 
-enum CommandType {READY = 0x0, ON = 0x12, OFF = 0x13, COLOR = 0x20};
+enum CommandType {ON = 0x12, OFF = 0x13, COLOR = 0x20};
 enum LampState {LampON, LampOFF};
 
 struct CommandData;
